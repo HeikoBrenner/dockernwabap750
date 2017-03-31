@@ -1,5 +1,5 @@
 FROM opensuse:latest
-RUN zypper --non-interactive install uuidd hostname wget unrar tcsh tar which
+RUN zypper --non-interactive install --replacefiles uuidd hostname wget unrar tcsh tar which net-tools iproute
 RUN echo $'#!/bin/bash \n\
 echo "Free space - initial:" \n\
 df -h \n\
@@ -28,11 +28,11 @@ chmod +x /tmp/sap_netweaver_as_abap_750_sp02_ase_dev_edition/install.sh \n\
 /tmp/sap_netweaver_as_abap_750_sp02_ase_dev_edition/install.sh -s \n\
 echo "Free space - after installation" \n\
 df -h' >> /tmp/install.sh; chmod +x /tmp/install.sh
-CMD uuidd start
 EXPOSE 8000
 EXPOSE 44300
 EXPOSE 3300
 EXPOSE 3200
 
 # docker build -t nwabap .
-# docker run --interactive -P -h vhcalnplci nwabap /tmp/install.sh
+# docker run -P -h vhcalnplci --name nwabap750 -it nwabap /bin/bash
+# /tmp/install.sh
