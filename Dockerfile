@@ -1,5 +1,5 @@
 FROM opensuse:latest
-RUN zypper --non-interactive install --replacefiles uuidd hostname wget unrar tcsh tar which net-tools iproute
+RUN zypper --non-interactive install --replacefiles uuidd hostname wget unrar tcsh tar which net-tools iproute2
 RUN echo $'#!/bin/bash \n\
 echo "Free space - initial:" \n\
 df -h \n\
