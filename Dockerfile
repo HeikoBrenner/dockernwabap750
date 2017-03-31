@@ -4,14 +4,14 @@ RUN echo $'#!/bin/bash \n\
 echo "Free space - initial:" \n\
 df -h \n\
 URL_LIST=$(cat <<-END\n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part1.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part2.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part3.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part4.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part5.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part6.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part7.rar" \n\
-  "http://fractal.fritz.box/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part8.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part1.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part2.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part3.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part4.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part5.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part6.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part7.rar" \n\
+  "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part8.rar" \n\
 END\n\
 )\n\
 echo $URL_LIST | xargs -n 1 wget -P /tmp -nv --no-cookies --header "Cookie: eula_3_1_agreed=tools.hana.ondemand.com/developer-license-3_1.txt" \n\
