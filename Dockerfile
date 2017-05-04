@@ -14,7 +14,7 @@ URL_LIST=$(cat <<-END\n\
   "https://tools.hana.ondemand.com/additional/sap_netweaver_as_abap_750_sp02_ase_dev_edition.part8.rar" \n\
 END\n\
 )\n\
-echo $URL_LIST | xargs -n 1 wget -P /tmp -c --no-cookies --header "Cookie: eula_3_1_agreed=tools.hana.ondemand.com/developer-license-3_1.txt" \n\
+echo $URL_LIST | xargs -n 1 wget -P /tmp -c --tries=0 --read-timeout=20 --no-cookies --header "Cookie: eula_3_1_agreed=tools.hana.ondemand.com/developer-license-3_1.txt" \n\
 echo "Free space - after download" \n\
 df -h \n\
 mkdir /tmp/sap_netweaver_as_abap_750_sp02_ase_dev_edition \n\
