@@ -13,7 +13,7 @@ docker build -t nwabap .
 ```
 * Startup the container by running
 ```
-docker run -P -h vhcalnplci --name nwabap750 -it nwabap /bin/bash
+docker run -p 8000:8000 -p 44300:44300 -p 3300:3300 -p 3200:3200 -h vhcalnplci --name nwabap750 -it nwabap /bin/bash
 ```
 * Start the SAP NetWeaver ABAP 7.50 Developer edition installation by running
 ```
